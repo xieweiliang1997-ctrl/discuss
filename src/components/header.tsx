@@ -1,10 +1,6 @@
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@heroui/navbar";
-import * as actions from "@/src/actions";
-import {Button} from "@heroui/button";
 import {Input} from "@heroui/input";
-import {auth} from "@/src/auth";
-import {Avatar} from "@heroui/avatar";
-import {Popover, PopoverContent, PopoverTrigger} from "@heroui/popover";
+import HeaderAuth from "@/src/components/header-auth";
 
 export const AcmeLogo = () => {
   return (
@@ -20,40 +16,7 @@ export const AcmeLogo = () => {
 };
 
 export default async function Header() {
-  const session = await auth()
-  let autoContent:React.ReactNode
-  if(session?.user){
-    autoContent = <Popover placement="bottom">
-      <PopoverTrigger>
-        <Avatar src={session?.user.image ||'https://i.pravatar.cc/150?u=a042581f4e29026024d'} alt="User Avatar" />
-      </PopoverTrigger>
-      <PopoverContent>
-        <div className="px-1 py-2">
-          <form action={actions.signOut}>
-            <Button type={"submit"}>退出</Button>
-          </form>
 
-        </div>
-      </PopoverContent>
-    </Popover>
-  }else{
-    autoContent = <>
-      <NavbarItem className="hidden lg:flex">
-        <form action={actions.signIn}>
-          <Button color="secondary" type={"submit"} href="#" variant="bordered">
-            Sign In
-          </Button>
-        </form>
-      </NavbarItem>
-      <NavbarItem>
-        <form action={actions.signIn}>
-          <Button color="secondary" type={"submit"} href="#">
-            Sign Up
-          </Button>
-        </form>
-      </NavbarItem>
-    </>
-  }
   return (
     <Navbar className='border-b-1 border-gray-200'>
       <NavbarBrand>
@@ -64,10 +27,9 @@ export default async function Header() {
         <NavbarItem>
           <Input></Input>
         </NavbarItem>
-
       </NavbarContent>
       <NavbarContent justify="end">
-        {autoContent}
+        <HeaderAuth></HeaderAuth>
       </NavbarContent>
     </Navbar>
   );
