@@ -15,8 +15,12 @@ const config = {
       },
     },
   },
+
   // darkMode: "class",
   plugins: [heroui()],
+  // experimental: {
+  //   serverActions: true, // 启用 Server Actions
+  // },
 }
 
 module.exports = config;

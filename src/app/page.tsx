@@ -1,13 +1,14 @@
-import { Button } from "@heroui/button";
-import SignButton from "@/src/components/sign-button";
-import UserAvatar from "@/src/components/UserAvatar";
-import { SignOutButton } from "../components/signout-button";
+import TopicCrateForm from "@/src/components/topic-crate-form";
 
 export default function Home() {
   return (
+    <div className="flex justify-between">
+     <div>
+       <h1 className='text-xl mt-2'>Top Posts</h1>
+     </div>
     <div>
-     Hello world
-
+      <TopicCrateForm></TopicCrateForm>
+    </div>
     </div>
   );
 }
