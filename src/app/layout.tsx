@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import { Link } from "@heroui/link";
 import clsx from "clsx";
-
+import Header from "@/src/components/header"
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
@@ -40,9 +40,10 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+        <Providers themeProps={{ attribute: "class"}}>
           
-            <main className="container flex-grow px-6 pt-16 mx-auto max-w-7xl">
+            <main className="">
+              <Header></Header>
               {children}
             </main>
           
