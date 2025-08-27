@@ -6,11 +6,15 @@ import {Button} from "@heroui/button";
 import {Avatar} from "@heroui/avatar";
 import {Popover, PopoverContent, PopoverTrigger} from "@heroui/popover";
 import {useSession} from "next-auth/react";
+import Spinner from "@/src/components/spinner";
 
 export default  function HeaderAuth() {
-  const {data:session} = useSession();
+  const {data:session,status} = useSession();
   let autoContent:React.ReactNode
-  if(session?.user){
+
+  if (status==='loading'){
+    autoContent=<Spinner/>
+  }else if (session?.user){
     autoContent = <Popover placement="bottom">
       <PopoverTrigger>
         <Avatar src={session?.user.image ||'https://i.pravatar.cc/150?u=a042581f4e29026024d'} alt="User Avatar" />
