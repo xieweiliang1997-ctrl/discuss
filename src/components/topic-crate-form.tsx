@@ -4,7 +4,7 @@ import {Popover, PopoverContent, PopoverTrigger} from "@heroui/popover";
 import {Input, Textarea} from "@heroui/input";
 import * as actions from "@/src/actions"
 import {startTransition, useActionState} from "react"
-
+import {Chip} from "@heroui/chip";
 export default function TopicCrateForm() {
   const [state, formAction] = useActionState(actions.createTopic, {
     errors: {}
@@ -22,7 +22,7 @@ export default function TopicCrateForm() {
         <Button color={"secondary"} variant={'bordered'}>Crate a Topic</Button>
       </PopoverTrigger>
       <PopoverContent>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} noValidate>
           <div className="flex flex-col gap-4 p-4 w-80">
             <h3 className='text-lg'>Create a Topic</h3>
             <Input name={'name'} labelPlacement={"outside"} label={"name"} placeholder={"name"}
@@ -30,6 +30,7 @@ export default function TopicCrateForm() {
             <Textarea name={'description'} labelPlacement={"outside"} label={"description"}
                       placeholder={"topic description please"} isInvalid={!!state.errors.description}
                       errorMessage={state.errors.description?.join('')}></Textarea>
+            {state.errors._form?<Chip variant={"bordered"} radius={'sm'} className="max-w-full">{state.errors._form.join(',')}</Chip>:null}
             <Button type={"submit"}>submit</Button>
           </div>
         </form>
