@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ecae7bdd-3d5d-4b6b-a8e7-0563727df41d" name="更改" comment="[Feat] create schema">
+      <change afterPath="$PROJECT_DIR$/src/actions/create-posts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/topics/[name]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/topics/[name]/posts/[postId]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/posts/post-list.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/posts/posts-crate-form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/toptic/topic-list.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prisma/query/posts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prisma/query/topics.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/dev.db" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/dev.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/create-topic.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/create-topic.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/topic-crate-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toptic/topic-crate-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prisma.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="31rK1O30ICOQD3kkNKqCP4teaA3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/EDY/Desktop/discuss/src/actions&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\EDY\\Desktop\\discuss\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\EDY\Desktop\discuss\src\actions" />
+      <recent name="C:\Users\EDY\Desktop\discuss\src\components\posts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\EDY\Desktop\discuss\src\components\toptic" />
+      <recent name="C:\Users\EDY\Desktop\discuss\src\prisma" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="ecae7bdd-3d5d-4b6b-a8e7-0563727df41d" name="更改" comment="" />
+      <created>1756276538991</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756276538991</updated>
+      <workItem from="1756276541788" duration="87000" />
+      <workItem from="1756276644385" duration="8579000" />
+      <workItem from="1756342887768" duration="568000" />
+      <workItem from="1756360300101" duration="2102000" />
+      <workItem from="1756362461226" duration="3149000" />
+      <workItem from="1756365673850" duration="5046000" />
+      <workItem from="1756461435898" duration="14000" />
+    </task>
+    <task id="LOCAL-00001" summary="[Feat] 登录及退出逻辑处理">
+      <option name="closed" value="true" />
+      <created>1756279584341</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1756279584341</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[Feat] 封装auth">
+      <option name="closed" value="true" />
+      <created>1756280399714</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756280399714</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[Feat] header loading status">
+      <option name="closed" value="true" />
+      <created>1756280732366</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756280732366</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[Feat] use useActionState">
+      <option name="closed" value="true" />
+      <created>1756284060497</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756284060497</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[Feat] reset button">
+      <option name="closed" value="true" />
+      <created>1756284412811</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756284412811</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[Feat] create schema">
+      <option name="closed" value="true" />
+      <created>1756362074232</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756362074232</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[Feat] 登录及退出逻辑处理" />
+    <MESSAGE value="[Feat] 封装auth" />
+    <MESSAGE value="[Feat] header loading status" />
+    <MESSAGE value="[Feat] use useActionState" />
+    <MESSAGE value="[Feat] reset button" />
+    <MESSAGE value="[Feat] create schema" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Feat] create schema" />
+  </component>
+</project>
