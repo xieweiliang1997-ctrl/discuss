@@ -6,9 +6,11 @@ import * as actions from "@/src/actions"
 import {startTransition, useActionState} from "react"
 import {Chip} from "@heroui/chip";
 export default function TopicCrateForm() {
-  const [state, formAction] = useActionState(actions.createTopic, {
+  const [state, formAction,isPending] = useActionState(actions.createTopic, {
     errors: {}
   })
+
+
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -19,7 +21,7 @@ export default function TopicCrateForm() {
   return (
     <Popover placement="bottom">
       <PopoverTrigger>
-        <Button color={"secondary"} variant={'bordered'}>Crate a Topic</Button>
+        <Button color={"secondary"} variant={'bordered'} className='block ml-auto'>Crate a Topic</Button>
       </PopoverTrigger>
       <PopoverContent>
         <form onSubmit={handleSubmit} noValidate>
@@ -31,7 +33,7 @@ export default function TopicCrateForm() {
                       placeholder={"topic description please"} isInvalid={!!state.errors.description}
                       errorMessage={state.errors.description?.join('')}></Textarea>
             {state.errors._form?<Chip variant={"bordered"} radius={'sm'} className="max-w-full">{state.errors._form.join(',')}</Chip>:null}
-            <Button type={"submit"}>submit</Button>
+            <Button isLoading={isPending} type={"submit"}>submit</Button>
           </div>
         </form>
       </PopoverContent>

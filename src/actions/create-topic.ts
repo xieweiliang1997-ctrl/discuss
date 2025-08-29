@@ -2,6 +2,10 @@
 
 import {z} from "zod"
 import {auth} from "@/src/auth";
+import {prisma} from "@/src/prisma";
+import {redirect} from "next/navigation";
+import {Topic} from ".prisma/client";
+import {sleep} from "@/src/utils";
 
 interface CreateTopicFormState {
   errors:{
@@ -19,6 +23,7 @@ const createTopicSchema = z.object({
 })
 
 export async function createTopic(pervState:CreateTopicFormState,formData:FormData):Promise<CreateTopicFormState> {
+  await sleep(3000)
   const name = formData.get("name")
   const description = formData.get("description")
   const result = createTopicSchema.safeParse({
@@ -39,5 +44,32 @@ export async function createTopic(pervState:CreateTopicFormState,formData:FormDa
       }
     }
   }
-  return {errors:{}}
+
+  // console.log('session.user.id:',session.user.id)
+  let topic :Topic;
+  try {
+    topic = await prisma.topic.create({
+      data:{
+        name:result.data.name,
+        description:result.data.description,
+        userId:session.user.id,
+      }
+    })
+  }catch (err:unknown){
+    if (err instanceof Error){
+      return {
+        errors:{
+          _form:[err.message],
+        }
+      }
+    }else{
+      return {
+        errors:{
+          _form:["Something went wrong"],
+        }
+      }
+    }
+  }
+  redirect(`/topics/${topic.name}`)
+
 }

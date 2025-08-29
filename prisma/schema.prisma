@@ -104,7 +104,7 @@ model Post {
   updateAt DateTime  @updatedAt
   User     User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId   String?
-  Topic    Topic?    @relation(fields: [topicId], references: [id])
+  topic    Topic?    @relation(fields: [topicId], references: [id])
   topicId  String?
   comments Comment[]
 }
