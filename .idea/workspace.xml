@@ -5,23 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecae7bdd-3d5d-4b6b-a8e7-0563727df41d" name="更改" comment="[Feat] create schema">
-      <change afterPath="$PROJECT_DIR$/src/actions/create-posts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/topics/[name]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/topics/[name]/posts/[postId]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/posts/post-list.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/posts/posts-crate-form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/toptic/topic-list.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prisma/query/posts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prisma/query/topics.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/create-comments.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/comments/comment-create-form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/comments/comment-list.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/comments/comment-show.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/posts/post-show-loading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/posts/post-show.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/prisma/query/comment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prisma/dev.db" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/dev.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/create-topic.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/create-topic.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/topic-crate-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toptic/topic-crate-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prisma.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/topics/[name]/posts/[postId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/topics/[name]/posts/[postId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts/post-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/post-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts/posts-crate-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/posts-crate-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +107,7 @@
       <workItem from="1756362461226" duration="3149000" />
       <workItem from="1756365673850" duration="5046000" />
       <workItem from="1756461435898" duration="14000" />
+      <workItem from="1756706432432" duration="6349000" />
     </task>
     <task id="LOCAL-00001" summary="[Feat] 登录及退出逻辑处理">
       <option name="closed" value="true" />

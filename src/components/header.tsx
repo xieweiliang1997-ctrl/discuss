@@ -1,6 +1,7 @@
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@heroui/navbar";
 import {Input} from "@heroui/input";
 import HeaderAuth from "@/src/components/header-auth";
+import {Link} from "@heroui/link";
 
 export const AcmeLogo = () => {
   return (
@@ -20,8 +21,10 @@ export default async function Header() {
   return (
     <Navbar className='border-b-1 border-gray-200'>
       <NavbarBrand>
-      <AcmeLogo />
-        <p className="font-bold text-inherit">ACME</p>
+        <Link href={'/'} className={"flex items-center ml-[-10px]"}>
+          <AcmeLogo />
+          <p className="font-bold text-inherit">ACME</p>
+        </Link>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
