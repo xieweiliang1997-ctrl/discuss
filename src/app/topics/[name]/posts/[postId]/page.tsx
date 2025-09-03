@@ -4,14 +4,16 @@ import PostShowLoading from "@/src/components/posts/post-show-loading";
 import CommentCreateForm from "@/src/components/comments/comment-create-form";
 import CommentList from "@/src/components/comments/comment-list";
 
-interface PostShowPageProps {
-  params: {
-    name: string,
-    postId: string
-  }
+interface PostShowParams {
+  name: string;
+  postId: string;
 }
 
-export default async function PostShowPage({params}: PostShowPageProps) {
+interface PostShowPageProps{
+  params:Promise<PostShowParams>
+}
+
+export default async function PostShowPage({params}:PostShowPageProps) {
   const {name, postId} = await params;
 
   return (
@@ -19,7 +21,7 @@ export default async function PostShowPage({params}: PostShowPageProps) {
       <Suspense fallback={<PostShowLoading/>}>
         <PostShow postId={postId}/>
       </Suspense>
-      <CommentCreateForm postId={postId}/>
+      <CommentCreateForm isOpen={true} postId={postId}/>
       <CommentList postId={postId}/>
     </div>
   )

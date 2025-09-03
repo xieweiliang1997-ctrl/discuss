@@ -6,22 +6,21 @@ import {prisma} from "@/src/prisma";
 import {redirect} from "next/navigation";
 import {Post} from ".prisma/client";
 import {sleep} from "@/src/utils";
+import {revalidatePath} from "next/cache";
 
 interface CreateCommentFormState {
   errors: {
-    title?: string[],
     content?: string[],
     _form?: string[],
-  }
+  };
+  success?:boolean;
 }
 
 const createCommentSchema = z.object({
   content: z.string().min(10).max(4747),
 })
 
-export async function createComment({postId}: {postId:string}, pervState: CreateCommentFormState, formData: FormData): Promise<CreateCommentFormState> {
-  // await sleep(3000)
-  const title = formData.get("title")
+export async function createComment({postId,parentId}: {postId:string,parentId?:string}, pervState: CreateCommentFormState, formData: FormData): Promise<CreateCommentFormState> {
   const content = formData.get("content")
   const result = createCommentSchema.safeParse({
 
@@ -48,6 +47,7 @@ export async function createComment({postId}: {postId:string}, pervState: Create
         content: result.data.content,
         userId: session.user.id,
         postId,
+        parentId
       }
     })
   } catch (err: unknown) {
@@ -65,9 +65,29 @@ export async function createComment({postId}: {postId:string}, pervState: Create
       }
     }
   }
+
+  const topic = await prisma.topic.findFirst({
+    where: {
+      posts:{
+        some:{
+          id:postId
+        }
+      }
+    }
+  })
+  if (!topic){
+    return {
+      errors: {
+        _form:['You must be signed in to do this.'],
+      }
+    }
+  }
+  revalidatePath(`/topics/${topic.name}/posts/${postId}`)
+
   return {
     errors: {
 
-    }
+    },
+    success:true
   }
 }
